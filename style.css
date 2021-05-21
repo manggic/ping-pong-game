@@ -1,0 +1,64 @@
+
+
+td{
+   width : 50px;
+   height: 50px;
+   background-color: black;
+}
+
+#btn{
+  width: 80px;
+  height: 40px;
+  color: azure;
+  background-color: brown;
+  border-radius: 20px;
+}
+
+
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#over{
+  color: aquamarine;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+table{
+  border: 10px solid red;
+  margin: 0 auto;
+}
+
+#target{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: red;
+    border: 2px solid red;
+    margin: 0 auto;
+}
+
+#source{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    border: 2px solid greenyellow;
+    margin: 0 auto;
+}
+
+
+
+body{
+  height: 100vh;
+
+  background-color: gray;
+}
+
+
+#score{
+  color: white;
+}
