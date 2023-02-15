@@ -7,9 +7,14 @@ var row = 0;
 var column = 0;
 var keyPress = "";
 
+let left = 37;
+let up = 38;
+let right = 39;
+let down = 40;
+
 function callMe() {
-  document.addEventListener("keypress", function (e) {
-    keyPress = e.key;
+  document.addEventListener("keydown", function (e) {
+    keyPress = e.which;
   });
 }
 
@@ -37,13 +42,13 @@ function ifCallZThen() {
       changeTheTarget();
     }
 
-    if (keyPress === "w" || keyPress === "W") {
+    if (keyPress === up ) {
       ifCallWThen();
       return;
-    } else if (keyPress === "a" || keyPress === "A") {
+    } else if (keyPress === left ) {
       ifCallAThen();
       return;
-    } else if (keyPress === "l" || keyPress === "L") {
+    } else if (keyPress === right) {
       ifCallLThen();
       return;
     }
@@ -82,13 +87,13 @@ function ifCallWThen() {
     if (row === targetRow && column === targetColumn) {
       changeTheTarget();
     }
-    if (keyPress === "z" || keyPress === "z") {
+    if (keyPress === down) {
       ifCallZThen();
       return;
-    } else if (keyPress === "a" || keyPress === "A") {
+    } else if (keyPress === left ) {
       ifCallAThen();
       return;
-    } else if (keyPress === "l" || keyPress === "L") {
+    } else if (keyPress === right) {
       ifCallLThen();
       return;
     }
@@ -125,13 +130,13 @@ function ifCallAThen() {
     if (row === targetRow && column === targetColumn) {
       changeTheTarget();
     }
-    if (keyPress === "w" || keyPress === "W") {
+    if (keyPress === up || keyPress === up) {
       ifCallWThen();
       return;
-    } else if (keyPress === "z" || keyPress === "Z") {
+    } else if (keyPress === down) {
       ifCallZThen();
       return;
-    } else if (keyPress === "l" || keyPress === "L") {
+    } else if (keyPress === right) {
       ifCallLThen();
       return;
     }
@@ -169,13 +174,13 @@ function ifCallLThen() {
       if (row === targetRow && column === targetColumn) {
         changeTheTarget();
       }
-      if (keyPress === "w" || keyPress === "W") {
+      if (keyPress === up || keyPress === up) {
         ifCallWThen();
         return;
-      } else if (keyPress === "a" || keyPress === "A") {
+      } else if (keyPress === left ) {
         ifCallAThen();
         return;
-      } else if (keyPress === "z" || keyPress === "Z") {
+      } else if (keyPress === down) {
         ifCallZThen();
         return;
       }
@@ -230,13 +235,13 @@ function start() {
 
   function myLoop() {
     column = i - 1;
-    if (keyPress === "z" || keyPress === "Z") {
+    if (keyPress === down) {
       ifCallZThen();
-    } else if (keyPress === "w" || keyPress === "W") {
+    } else if (keyPress === up) {
       ifCallWThen();
-    } else if (keyPress === "a" || keyPress === "A") {
+    } else if (keyPress === left) {
       ifCallAThen();
-    } else if (keyPress === "l" || keyPress === "L") {
+    } else if (keyPress === right) {
       ifCallLThen();
     } else {
       setTimeout(function () {
